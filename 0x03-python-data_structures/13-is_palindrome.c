@@ -7,24 +7,24 @@
  */
 int is_palindrome(listint_t **head)
 {
-    listint_t *tmp = *head;
-    int i = 0, j = 0, arr[10000];
+	listint_t *tmp = *head;
+	int i = 0, j = 0, arr[10000];
 
-    if (!head || !*head)
-        return (1);
-    while (tmp)
-    {
-        arr[i] = tmp->n;
-        tmp = tmp->next;
-        i++;
-    }
-    i--;
-    while (j < i)
-    {
-        if (arr[j] != arr[i])
-            return (0);
-        j++;
-        i--;
-    }
-    return (1);
+	if (!head || !*head)
+		return (1);
+	while (tmp)
+	{
+		arr[i] = tmp->n;
+		tmp = tmp->next;
+		i++;
+	}
+	i--;
+	while (j < i)
+	{
+		if (arr[j] != arr[i])
+			return (0);
+		j++;
+		i--;
+	}
+	return (1);
 }
