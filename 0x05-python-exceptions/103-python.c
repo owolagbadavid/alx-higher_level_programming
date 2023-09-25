@@ -32,6 +32,28 @@ void print_python_bytes(PyObject *p)
 	printf("\n");
 }
 
+
+/**
+ * print_python_float - prints info about python float
+ * @p: pointer to PyObject
+ */
+void print_python_float(PyObject *p)
+{
+	char *str;
+	double d;
+
+	fflush(stdout);
+	printf("[.] float object info\n");
+	if (!PyFloat_CheckExact(p))
+	{
+		printf("  [ERROR] Invalid Float Object\n");
+		return;
+	}
+	d = ((PyFloatObject *)p)->ob_fval;
+	str = PyOS_double_to_string(d, 'r', 0, Py_DTSF_ADD_DOT_0, NULL);
+	printf("  value: %s\n", str);
+}
+
 /**
  * print_python_list - prints info about python lists
  * @p: pointer to PyObject
@@ -57,26 +79,7 @@ void print_python_list(PyObject *p)
 		printf("Element %ld: %s\n", i, item->ob_type->tp_name);
 		if (PyBytes_Check(item))
 			print_python_bytes(item);
+		else if (PyFloat_Check(item))
+			print_python_float(item);
 	}
-}
-
-/**
- * print_python_float - prints info about python float
- * @p: pointer to PyObject
- */
-void print_python_float(PyObject *p)
-{
-	char *str;
-	double d;
-
-	fflush(stdout);
-	printf("[.] float object info\n");
-	if (!PyFloat_CheckExact(p))
-	{
-		printf("  [ERROR] Invalid Float Object\n");
-		return;
-	}
-	d = ((PyFloatObject *)p)->ob_fval;
-	str = PyOS_double_to_string(d, 'r', 0, Py_DTSF_ADD_DOT_0, NULL);
-	printf("  value: %s\n", str);
 }
