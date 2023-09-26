@@ -2,7 +2,7 @@
 """Node class definition"""
 
 
-class Node:
+class Node():
     """Defines a node of a singly linked list."""
 
     def __init__(self, data, next_node=None) -> None:
