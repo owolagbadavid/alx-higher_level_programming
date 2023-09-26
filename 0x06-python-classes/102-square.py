@@ -46,6 +46,7 @@ class Square:
 
         Args:
             value (int): the new square size
+
         Returns:
             None
         """
@@ -61,6 +62,7 @@ class Square:
 
         Args:
             other (Square): the other square
+
         Returns:
             True if self is less than other, False otherwise
         """
@@ -71,6 +73,7 @@ class Square:
 
         Args:
             other (Square): the other square
+
         Returns:
             True if self is less than or equal to other, False otherwise
         """
@@ -81,6 +84,7 @@ class Square:
 
         Args:
             other (Square): the other square
+
         Returns:
             True if self is equal to other, False otherwise
         """
@@ -91,6 +95,7 @@ class Square:
 
         Args:
             other (Square): the other square
+
         Returns:
             True if self is not equal to other, False otherwise
         """
@@ -101,6 +106,7 @@ class Square:
 
         Args:
             other (Square): the other square
+
         Returns:
             True if self is greater than other, False otherwise
         """
@@ -111,6 +117,7 @@ class Square:
 
         Args:
             other (Square): the other square
+
         Returns:
             True if self is greater than or equal to other, False otherwise
         """
