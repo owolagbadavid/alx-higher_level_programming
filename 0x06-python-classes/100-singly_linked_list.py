@@ -9,7 +9,7 @@ uses a sorted insert in the singly linked list
 class Node():
     """Defines a node of a singly linked list."""
 
-    def __init__(self, data, next_node=None) -> None:
+    def __init__(self, data, next_node=None):
         """Sets up a new node.
         Args:
             data (int): data stored inside the node
@@ -19,7 +19,7 @@ class Node():
         self.next_node = next_node
 
     @property
-    def data(self) -> int:
+    def data(self):
         """Gets the data stored inside the node.
         Returns:
             int: data stored inside the node
@@ -27,7 +27,7 @@ class Node():
         return self.__data
 
     @data.setter
-    def data(self, value: int) -> None:
+    def data(self, value):
         """Sets the data stored inside the node.
         Args:
             value (int): data stored inside the node
@@ -47,7 +47,7 @@ class Node():
         return self.__next_node
 
     @next_node.setter
-    def next_node(self, value) -> None:
+    def next_node(self, value):
         """Sets the next node in the singly linked list.
         Args:
             value (Node): next node in the singly linked list
@@ -61,11 +61,11 @@ class Node():
 class SinglyLinkedList():
     """Defines a singly linked list."""
 
-    def __init__(self) -> None:
+    def __init__(self):
         """Sets up a new singly linked list."""
         self.__head = None
 
-    def __str__(self) -> str:
+    def __str__(self):
         """Returns a string representation of the singly linked list.
         Returns:
             str: string representation of the singly linked list
@@ -79,7 +79,7 @@ class SinglyLinkedList():
             node = node.next_node
         return string
 
-    def sorted_insert(self, value: int) -> None:
+    def sorted_insert(self, value: int):
         """Inserts a new node into the singly linked list.
         The singly linked list is sorted in ascending order.
         Args:
