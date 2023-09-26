@@ -25,7 +25,7 @@ class Node():
             int: data stored inside the node
         """
         return self.__data
-    
+
     @data.setter
     def data(self, value: int) -> None:
         """Sets the data stored inside the node.
@@ -45,7 +45,7 @@ class Node():
             Node: next node in the singly linked list
         """
         return self.__next_node
-    
+
     @next_node.setter
     def next_node(self, value) -> None:
         """Sets the next node in the singly linked list.
