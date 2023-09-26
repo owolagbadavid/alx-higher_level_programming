@@ -101,4 +101,3 @@ class SinglyLinkedList:
                 node = node.next_node
             new_node.next_node = node.next_node
             node.next_node = new_node
-
