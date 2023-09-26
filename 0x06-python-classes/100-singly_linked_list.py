@@ -5,7 +5,7 @@ uses a sorted insert in the singly linked list
 """
 
 
-class Node:
+class Node():
     """Defines a node of a singly linked list."""
 
     def __init__(self, data: int, next_node = None):
@@ -59,7 +59,7 @@ class Node:
         self.__next_node = value
 
 
-class SinglyLinkedList:
+class SinglyLinkedList():
     """Defines a singly linked list."""
 
     def __init__(self):
