@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Node class definition
+
 defines a node of a singly linked list
 defines a singly linked list
 uses a sorted insert in the singly linked list
