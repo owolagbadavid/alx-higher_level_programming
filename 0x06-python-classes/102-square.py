@@ -67,7 +67,7 @@ class Square:
             True if self is less than other, False otherwise
         """
         return self.area() < other.area()
-    
+
     def __le__(self, other):
         """less than or equal to comparison
 
@@ -78,7 +78,7 @@ class Square:
             True if self is less than or equal to other, False otherwise
         """
         return self.area() <= other.area()
-    
+
     def __eq__(self, other):
         """equal to comparison
 
@@ -89,7 +89,7 @@ class Square:
             True if self is equal to other, False otherwise
         """
         return self.area() == other.area()
-    
+
     def __ne__(self, other):
         """not equal to comparison
 
@@ -100,7 +100,7 @@ class Square:
             True if self is not equal to other, False otherwise
         """
         return self.area() != other.area()
-    
+
     def __gt__(self, other):
         """greater than comparison
 
@@ -111,7 +111,7 @@ class Square:
             True if self is greater than other, False otherwise
         """
         return self.area() > other.area()
-    
+
     def __ge__(self, other):
         """greater than or equal to comparison
 
