@@ -13,6 +13,7 @@ class Square:
 
         Args:
             size (int): size of the square
+
         Returns:
             None
         """
