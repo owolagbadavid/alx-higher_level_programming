@@ -3,12 +3,14 @@
 
 
 class Square:
-    """A square class."""
+    """A square class"""
 
 
-    """class instantiation"""
     def __init__(self, size=0):
-        """checks size for errors"""
+        """checks size for errors
+        Args:
+            size (int): size of the square
+            """
         if type(size) is not int:
             raise TypeError('size must be an integer')
         elif size < 0:
@@ -17,5 +19,7 @@ class Square:
 
     """area method"""
     def area(self):
-        """returns the current square area"""
+        """returns the current square area
+        Returns:
+            the square area"""
         return self.__size ** 2
