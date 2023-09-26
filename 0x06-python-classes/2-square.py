@@ -13,6 +13,8 @@ class Square:
         """size instantiation
         Args:
             size (int): size of the square
+        Returns:
+            None
         """
         if type(size) is not int:
             raise TypeError('size must be an integer')
