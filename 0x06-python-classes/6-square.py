@@ -1,5 +1,12 @@
 #!/usr/bin/python3
-"""Square class definition..."""
+"""Square class definition...
+This class defines a square based on 5-square.py
+it adds a new private instance attribute position
+it adds a public getter and setter for position
+it adds a public instance method that prints the square
+taking into account position
+
+"""
 
 
 class Square:
