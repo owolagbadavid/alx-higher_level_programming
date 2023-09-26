@@ -16,8 +16,8 @@ class Node():
             data (int): data stored inside the node
             next_node (Node): next node in the singly linked list
         """
-        self.__data = data
-        self.__next_node = next_node
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
