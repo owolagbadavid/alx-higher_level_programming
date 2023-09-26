@@ -78,7 +78,7 @@ class SinglyLinkedList():
                 string += "\n"
             node = node.next_node
         return string
-    
+
     def sorted_insert(self, value: int) -> None:
         """Inserts a new node into the singly linked list.
         The singly linked list is sorted in ascending order.
