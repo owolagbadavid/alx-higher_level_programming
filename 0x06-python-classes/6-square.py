@@ -26,12 +26,14 @@ class Square:
             the square area
         """
         return self.__size ** 2
+    @property
     def size(self):
         """returns the current square size
         Returns:
             the square size
         """
         return self.__size
+    @size.setter
     def size(self, value):
         """sets the square size
         Args:
@@ -45,12 +47,14 @@ class Square:
             raise ValueError('size must be >= 0')
         else:
             self.__size = value
+    @property
     def position(self):
         """returns the current square position
         Returns:
             the square position
         """
         return self.__position
+    @position.setter
     def position(self, value):
         """sets the square position
         Args:
