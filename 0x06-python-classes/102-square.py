@@ -4,11 +4,13 @@
 
 class Square:
     """A square class
+
     Attributes:
         __size (int): size of the square
     """
     def __init__(self, size=0):
         """checks size for errors
+
         Args:
             size (int): size of the square
         Returns:
@@ -22,6 +24,7 @@ class Square:
 
     def area(self):
         """returns the current square area
+
         Returns:
             the square area
         """
@@ -30,6 +33,7 @@ class Square:
     @property
     def size(self):
         """returns the current square size
+
         Returns:
             the square size
         """
@@ -38,6 +42,7 @@ class Square:
     @size.setter
     def size(self, value):
         """sets the square size
+
         Args:
             value (int): the new square size
         Returns:
@@ -52,6 +57,7 @@ class Square:
 
     def __lt__(self, other):
         """less than comparison
+
         Args:
             other (Square): the other square
         Returns:
@@ -61,6 +67,7 @@ class Square:
     
     def __le__(self, other):
         """less than or equal to comparison
+
         Args:
             other (Square): the other square
         Returns:
@@ -70,6 +77,7 @@ class Square:
     
     def __eq__(self, other):
         """equal to comparison
+
         Args:
             other (Square): the other square
         Returns:
@@ -79,6 +87,7 @@ class Square:
     
     def __ne__(self, other):
         """not equal to comparison
+
         Args:
             other (Square): the other square
         Returns:
@@ -88,6 +97,7 @@ class Square:
     
     def __gt__(self, other):
         """greater than comparison
+
         Args:
             other (Square): the other square
         Returns:
@@ -97,6 +107,7 @@ class Square:
     
     def __ge__(self, other):
         """greater than or equal to comparison
+
         Args:
             other (Square): the other square
         Returns:
