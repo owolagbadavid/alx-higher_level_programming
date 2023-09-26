@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Square class definition...
+
 This class defines a square based on 5-square.py
 it adds a new private instance attribute position
 it adds a public getter and setter for position
@@ -14,8 +15,10 @@ class Square:
     Attributes:
         __size (int): size of the square
     """
+
     def __init__(self, size=0, position=(0, 0)):
         """checks size for errors
+
         Args:
             size (int): size of the square
         Returns:
@@ -39,6 +42,7 @@ class Square:
 
     def __str__(self) -> str:
         """prints the square, takes into account position
+
         Returns:
             None
         """
@@ -54,6 +58,7 @@ class Square:
 
     def area(self):
         """returns the current square area
+
         Returns:
             the square area
         """
@@ -62,6 +67,7 @@ class Square:
     @property
     def size(self):
         """returns the current square size
+
         Returns:
             the square size
         """
@@ -70,6 +76,7 @@ class Square:
     @size.setter
     def size(self, value):
         """sets the square size
+
         Args:
             value (int): the new square size
         Returns:
@@ -93,6 +100,7 @@ class Square:
     @position.setter
     def position(self, value):
         """sets the square position
+
         Args:
             value (int): the new square position
         Returns:
