@@ -46,15 +46,16 @@ class Square:
         Returns:
             None
         """
+        string = ""
         if self.__size == 0:
             return ''
         else:
             for i in range(self.__position[1]):
-                print()
+                string += "\n"
             for i in range(self.__size):
-                print(' ' * self.__position[0], end='')
-                print('#' * self.__size)
-            return ''
+                string += ' ' * self.__position[0]
+                string += '#' * self.__size + '\n'
+        return string[:-1]
 
     def area(self):
         """returns the current square area
