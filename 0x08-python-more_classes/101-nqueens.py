@@ -14,8 +14,8 @@ def is_safe(board, row, col, n):
     for i, j in zip(range(row, n), range(col, -1, -1)):
         if board[i][j] == 1:
             return False
-
     return True
+
 
 def solve_nqueens(n):
     if n < 4:
@@ -25,9 +25,10 @@ def solve_nqueens(n):
     board = [[0 for _ in range(n)] for _ in range(n)]
     solutions = []
     solve_util(board, 0, n, solutions)
-    
+
     for solution in solutions:
         print(solution)
+
 
 def solve_util(board, col, n, solutions):
     if col == n:
@@ -44,6 +45,7 @@ def solve_util(board, col, n, solutions):
             board[i][col] = 1
             solve_util(board, col + 1, n, solutions)
             board[i][col] = 0
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
