@@ -117,6 +117,4 @@ Checking NaN:
 
 Checking float overflow:
     >>> add_integer((1.8 * (10 *** 308)), 2)
-        Traceback (most recent call last):
-         ...
-         TypeError: add_integer() takes 2 positional arguments but 3 were given
+        89
