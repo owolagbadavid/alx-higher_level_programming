@@ -109,4 +109,6 @@ Checking more than 2 args:
 
 Checking float overflow:
     >>> add_integer((1.8 * (10 ** 308)), 2)
-    89
+     Traceback (most recent call last):
+	 ...
+	 OverflowError: cannot convert float infinity to integer
