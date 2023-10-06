@@ -53,7 +53,9 @@ Checking for passed NaN:
 
 Checking for passed inf:
 	 >>> add_integer(1, float('inf'))
-	 89
+	 Traceback (most recent call last):
+	 ...
+	 OverflowError: cannot convert float infinity to integer
 
 Checking super long int:
 	 >>> add_integer(999999999999999999999999999999, 1)
