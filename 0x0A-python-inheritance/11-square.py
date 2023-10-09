@@ -9,11 +9,3 @@ class Square(__import__('9-rectangle').Rectangle):
         self.integer_validator("size", size)
         self.__size = size
         super().__init__(size, size)
-
-    def __str__(self):
-        """Returns a string"""
-        return "[Square] {}/{}".format(self.__size, self.__size)
-
-    def print(self):
-        """Prints the square with size"""
-        print(self.__str__())
