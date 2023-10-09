@@ -1,5 +1,6 @@
      >>> BG = __import__("7-base_geometry").BaseGeometry
 
+
 Checking for area failure:
 	 >>> b = BG()
 	 >>> b.area()
@@ -91,4 +92,4 @@ Checking for too many arguments:
 	 Traceback (most recent call last):
          ...
 	 TypeError: integer_validator() takes 3 positional arguments but 4 were given
-     
+    
