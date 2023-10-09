@@ -11,7 +11,7 @@ Checking too many arguments for area:
 	 >>> b.area(1)
 	 Traceback (most recent call last):
          ...
-	 TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+	 TypeError: BG.area() takes 1 positional argument but 2 were given
 
 Checking integer validator for passing integer:
 	 >>> b.integer_validator("integer", 1)
