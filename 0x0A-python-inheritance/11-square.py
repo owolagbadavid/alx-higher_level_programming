@@ -13,7 +13,7 @@ class Square(__import__('9-rectangle').Rectangle):
     def __str__(self):
         """Returns a string"""
         return "[Square] {}/{}".format(self.__size, self.__size)
-    
+
     def print(self):
         """Prints the square with size"""
         print(self.__str__())
