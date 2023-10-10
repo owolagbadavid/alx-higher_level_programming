@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Script that reads stdin line by line and computes metrics"""
 import sys
-import os.path
+
 
 
 def print_stats(file_size, status_codes):
@@ -11,31 +11,24 @@ def print_stats(file_size, status_codes):
         if value != 0:
             print("{}: {}".format(key, value))
 
-
-def parse_line(line, file_size, status_codes):
-    """Function that parses a line"""
-    line = line.split()
-    file_size += int(line[-1])
-    status_codes[line[-2]] += 1
-    return file_size, status_codes
-
-
-def main():
-    """Function that reads stdin line by line and computes metrics"""
-    file_size = 0
-    status_codes = {"200": 0, "301": 0, "400": 0, "401": 0,
-                    "403": 0, "404": 0, "405": 0, "500": 0}
-    i = 0
-    try:
-        for line in sys.stdin:
-            file_size, status_codes = parse_line(line, file_size, status_codes)
-            i += 1
-            if i % 10 == 0:
-                print_stats(file_size, status_codes)
-    except KeyboardInterrupt:
-        print_stats(file_size, status_codes)
-        raise
-
-
-if __name__ == "__main__":
-    main()
+status_codes = {"200": 0, "301": 0, "400": 0, "401": 0,
+                "403": 0, "404": 0, "405": 0, "500": 0}
+file_size = 0
+counter = 0
+try:
+    for line in sys.stdin:
+        counter += 1
+        data = line.split()
+        try:
+            file_size += int(data[-1])
+        except:
+            pass
+        try:
+            status_codes[data[-2]] += 1
+        except:
+            pass
+        if counter % 10 == 0:
+            print_stats(file_size, status_codes)
+except KeyboardInterrupt:
+    print_stats(file_size, status_codes)
+    raise
