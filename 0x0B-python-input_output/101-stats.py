@@ -29,6 +29,7 @@ try:
             pass
         if counter % 10 == 0:
             print_stats(file_size, status_codes)
+    print_stats(file_size, status_codes)
 except KeyboardInterrupt:
     print_stats(file_size, status_codes)
     raise
