@@ -3,13 +3,13 @@
 import sys
 
 
-
 def print_stats(file_size, status_codes):
     """Function that prints the stats"""
     print("File size: {}".format(file_size))
     for key, value in sorted(status_codes.items()):
         if value != 0:
             print("{}: {}".format(key, value))
+
 
 status_codes = {"200": 0, "301": 0, "400": 0, "401": 0,
                 "403": 0, "404": 0, "405": 0, "500": 0}
