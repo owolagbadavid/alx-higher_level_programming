@@ -14,13 +14,11 @@ def print_stats(file_size, status_codes):
 
 def parse_line(line, file_size, status_codes):
     """Function that parses a line"""
-    try:
-        line = line.split()
-        file_size += int(line[-1])
-        status_codes[line[-2]] += 1
-    except:
-        pass
+    line = line.split()
+    file_size += int(line[-1])
+    status_codes[line[-2]] += 1
     return file_size, status_codes
+
 
 def main():
     """Function that reads stdin line by line and computes metrics"""
@@ -37,6 +35,7 @@ def main():
     except KeyboardInterrupt:
         print_stats(file_size, status_codes)
         raise
+
 
 if __name__ == "__main__":
     main()
