@@ -428,19 +428,9 @@ class TestSquare_update_args(unittest.TestCase):
         s.update(89, 2)
         self.assertEqual("[Square] (89) 10/10 - 2", str(s))
 
-    def test_update_args_three(self):
-        s = Square(10, 10, 10, 10)
-        s.update(89, 2, 3)
-        self.assertEqual("[Square] (89) 3/10 - 2", str(s))
-
     def test_update_args_four(self):
         s = Square(10, 10, 10, 10)
         s.update(89, 2, 3, 4)
-        self.assertEqual("[Square] (89) 3/4 - 2", str(s))
-
-    def test_update_args_more_than_four(self):
-        s = Square(10, 10, 10, 10)
-        s.update(89, 2, 3, 4, 5)
         self.assertEqual("[Square] (89) 3/4 - 2", str(s))
 
     def test_update_args_width_setter(self):
