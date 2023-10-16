@@ -66,17 +66,16 @@ class Base:
         Square: <id>,<size>,<x>,<y>
         """
         with open("{}.csv".format(cls.__name__), "w") as f:
-            if list_objs is None:
-                f.write("[]")
+            if cls.__name__ == "Rectangle":
+                f.write("id,width,height,x,y\n")
             else:
-                if cls.__name__ == "Rectangle":
-                    f.write("id,width,height,x,y\n")
-                else:
-                    f.write("id,size,x,y\n")
+                f.write("id,size,x,y\n")
+            if list_objs is not None:
                 for i in list_objs:
                     if cls.__name__ == "Rectangle":
                         f.write("{},{},{},{},{}\n".format(i.id, i.width,
-                                                          i.height, i.x, i.y))
+                                                          i.height,
+                                                          i.x, i.y))
                     else:
                         f.write("{},{},{},{}\n".format(i.id, i.size,
                                                        i.x, i.y))
