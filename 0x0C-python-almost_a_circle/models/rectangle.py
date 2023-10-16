@@ -4,6 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """ Rectangle class """
     @property
     def width(self):
         """ Getter """
